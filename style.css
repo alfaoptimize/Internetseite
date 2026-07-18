@@ -1,0 +1,505 @@
+body {
+  font-family: monospace;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 { font-size: 50px; }
+h2 { font-size: 35px; }
+h3 { font-size: 28px; }
+h4 { font-size: 21px; }
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: #0F6E56;
+}
+a:hover {
+  color: #085041;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 40px;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar .logo a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar .logo a:hover {
+  text-decoration: underline;
+}
+
+.navbar .logo img {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar .nav-list a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.navbar .nav-list a:hover {
+  color: #0F6E56;
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-button {
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-list {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  list-style: none;
+  padding: 15px;
+  width: 200px;
+}
+.nav-list li {
+  margin-bottom: 10px;
+}
+
+#menu-toggle { display: none; }
+#menu-toggle:checked + .menu-button + .nav-list {
+  display: block;
+}
+
+/* Intro */
+.intro {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Beschreibung */
+.beschreibung {
+  text-align: center;
+  padding: 40px 30px;
+}
+
+/* CTA Button */
+.kontakt {
+  display: block;
+  background-color: #1D9E75;
+  color: #fff;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+  margin: 30px auto;
+}
+.kontakt:hover {
+  background-color: #0F6E56;
+  color: #fff;
+}
+
+/* Vergleich */
+.vergleich {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 30px;
+}
+
+.vergleich > hr {
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  height: auto;
+  align-self: stretch;
+  margin: 0;
+  width: 1px;
+  flex-shrink: 0;
+}
+
+.problem {
+  padding: 30px;
+  background-color: #FAEEDA;
+  border: 1px solid #EF9F27;
+  border-radius: 8px;
+  color: #854F0B;
+  flex: 1;
+}
+.problem h3 {
+  color: #633806;
+}
+
+.lösung {
+  padding: 30px;
+  background-color: #E1F5EE;
+  border: 1px solid #5DCAA5;
+  border-radius: 8px;
+  color: #0F6E56;
+  flex: 1;
+}
+.lösung h3 {
+  color: #085041;
+}
+
+/* Listen */
+ol.liste,
+ul.liste {
+  list-style-position: inside;
+  display: inline-block;
+  text-align: left; /* center oder left */
+  margin: 0 auto;
+  padding-left: 0;
+}
+ol.liste li,
+ul.liste li {
+  margin-bottom: 5px;
+}
+
+/* Trenner */
+.trenner {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+.footer a:hover {
+  color: #fff;
+}
+
+/* Kontaktformular */
+.kontaktformular {
+  padding: 0px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.kontaktformularFelder {
+  margin-bottom: 20px;
+}
+
+.kontaktformularFelder label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+label[pflichfeld]::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.kontaktformularFelder input[type="text"],
+.kontaktformularFelder input[type="email"],
+.kontaktformularFelder textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.kontaktformularFelder textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.buttonGroup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+  width: 48%;
+}
+
+.submitButton {
+  background-color: green;
+  color: white;
+}
+
+.submitButton:hover {
+  filter: brightness(0.90);
+}
+
+.resetButton {
+  background-color: red;
+  color: white;
+}
+
+.resetButton:hover {
+  filter: brightness(0.90);
+}
+
+#submitMessage {
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loading {
+  background-color: yellow;
+  color: black;
+}
+
+.success {
+  background-color: green;
+  color: white;
+}
+
+.error {
+  background-color: red;
+  color: white;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Overlay für Spinner */
+#overlay {
+  display: none; /* unsichtbar von Anfang an */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Referenzen */
+.referenz {
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.referenzen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+.referenzen a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  width: 140px;
+  transition: transform 0.2s ease;
+}
+
+.referenzen a:hover {
+  transform: translateY(-5px);
+}
+
+.referenzen img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.referenzen p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Referenzen-html */
+.ref-bereich {
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+.ref-bereich a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  width: 140px;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.ref-bereich a:hover {
+  transform: translateY(-5px);
+}
+
+.ref-bereich img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 25px; }
+  h3 { font-size: 22px; }
+  h4 { font-size: 19px; }
+
+  .navbar { padding: 15px 20px; }
+
+  .vergleich {
+    flex-direction: column;
+  }
+  .vergleich > hr {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+    width: 80%;
+    margin: 10px auto;
+    height: 0;
+  }
+
+  .beschreibung {
+    padding: 20px 24px;
+  }
+
+  .referenzen {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .referenzen a {
+    width: 100px;
+  }
+
+  .referenzen img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* --- AB HIER: NUR FÜR DESKTOP / PC-ANSICHT (Eigenständiger Block) --- */
+@media (min-width: 769px) {
+  /* 1. Verstecke den "Menü ▾"-Button und die Checkbox komplett */
+  #menu-toggle, 
+  .menu-button {
+    display: none !important;
+  }
+
+  /* 2. Zwinge die Nav-List, direkt sichtbar zu sein und sich nebeneinander aufzureihen */
+  .nav-list {
+    display: flex !important;
+    flex-direction: row;
+    position: static;          /* Hebt die absolute Positionierung von Mobile auf */
+    width: auto;               /* Verhindert die fixe 200px Breite */
+    background: transparent;   /* Kein weißer Hintergrund-Kasten mehr */
+    border: none;              /* Rahmen von Mobile entfernen */
+    padding: 0;
+    margin: 0;
+    gap: 12px;                 /* Abstand zwischen den Kapsel-Buttons */
+  }
+
+  /* 3. Schalter für die Listen-Einträge (Abstand nach unten entfernen) */
+  .nav-list li {
+    margin-bottom: 0;
+  }
+
+  /* 4. Das Kapsel-Design für die Links (wie im Apps Script Screenshot) */
+  .navbar .nav-list a {
+    display: block;
+    padding: 8px 16px;
+    margin: 0;                 /* Überschreibt das alte 'margin: 0 10px' */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;       /* Abgerundete Kapsel-Ecken */
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.2s ease;
+  }
+
+  /* 5. Hover-Effekt für die Buttons */
+  .navbar .nav-list a:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+    color: #0F6E56;            /* Textfarbe wechselt beim Hovern zu deinem Brand-Grün */
+  }
+
+  /* 6. Effekt für ausgewählten Menü-Punkt */
+  .navbar .nav-list a.selected {
+    background-color: #0F6E56 !important;
+    border-color: #085041 !important;
+    color: #ffffff !important;
+  }
+} /* <-- Hier wird der Desktop-Block sauber geschlossen! */

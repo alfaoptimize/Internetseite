@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <!-- Zeichensatz -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Kontakt | AlfaOptimize – Prozessoptimierung für KMU in München</title>
+  <meta name="description" content="Jetzt unverbindlich Kontakt aufnehmen: AlfaOptimize hilft KMU in München bei der Prozessoptimierung.">
+
+  <!-- Canonical URL (verhindert Duplicate-Content-Probleme) -->
+  <link rel="canonical" href="https://www.alfaoptimize.de/kontakt.html">
+
+  <!-- Open Graph (damit Links auf LinkedIn/WhatsApp schön aussehen) -->
+  <meta property="og:title" content="Kontakt | AlfaOptimize">
+  <meta property="og:description" content="Unverbindlich anfragen: Wir optimieren Ihre Geschäftsprozesse.">
+  <meta property="og:url" content="https://www.alfaoptimize.de/kontakt.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.alfaoptimize.de/images/AO_logo.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/AO_logo.png" alt="AlfaOptimize Logo">
+        </a>
+      </div>
+
+      <div class="menu-wrapper">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-button">Menü ▾</label>
+
+        <ul class="nav-list">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="ueber.html">Über mich</a></li>
+          <li><a href="demos.html">Demos</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="kontakt.html" class="selected">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Kontakt</h1>
+    <p>Ein Erstgespräch um uns kennenzulernen und um zu sehen, wie und ob ich Ihnen helfen kann.<br>
+      Vorbereitung ist nicht nötig, wir brauchen nur Ihre Gedanken und Ideen.<br>
+    Zum Abschluss werde ich einschätzen was wie Sinn macht und umgesetzt werden kann.</p>
+  </section>
+
+  <section class="kontaktformular" id="kontaktformular">
+    <form id="contactForm" class="contact-form">
+      <div class="kontaktformularFelder">
+        <label for="email" pflichfeld>E-Mail-Adresse</label>
+        <input type="email" id="email" name="email" placeholder="max.mustermann@beispiel.de" required>
+      </div>
+
+      <div class="kontaktformularFelder">
+        <label for="firmenname" pflichfeld>Firmenname</label>
+        <input type="text" id="firmenname" name="firmenname" required>
+      </div>
+
+      <div class="kontaktformularFelder">
+        <label for="kontaktperson" pflichfeld>Kontaktperson</label>
+        <input type="text" id="kontaktperson" name="kontaktperson" placeholder="Vorname Nachname" required>
+      </div>
+
+      <div class="kontaktformularFelder"> 
+        <label for="branche" pflichfeld>Branche</label>
+        <input type="text" id="branche" name="branche" required>
+      </div>
+
+      <div class="kontaktformularFelder">
+        <label for="message" pflichfeld>Ihre Nachricht</label>
+        <textarea id="message" name="ihreNachricht" placeholder="Kurze Beschreibung Ihrer Herausforderung / Probleme" required></textarea>
+      </div>
+
+      <div class="buttonGroup">
+        <button type="submit" class="submitButton" id="submitButton">Absenden</button>
+        <button type="reset" class="resetButton">Löschen</button>
+      </div>
+
+      <p id="submitMessage"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p><a href="kontakt.html">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a
+      href="datenschutz.html">Datenschutz</a></p>
+      <p>©<a href="index.html">AlfaOptimize</a>- Alle Rechte vorbehalten.</p>
+  </footer>
+
+    <!-- Overlay + Spinner -->
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+
+    <script src="script.js" defer></script>
+
+  </body>
+
+  </html>
